@@ -5,14 +5,15 @@
     let image1Big = false
     let image2Big = false
 
+    //Home button function
     function goHome() {
         goto('/')
     }
 
+    //Increase size of images
     function image1Size() {
         image1Big = !image1Big
     }
-
     function image2Size() {
         image2Big = !image2Big
     }
@@ -57,7 +58,6 @@
       <p>
         Increased temperatures can have significant impacts on the environment, human health, and infrastructure. Understanding these impacts helps in planning and mitigation efforts to reduce adverse effects.
       </p>
-      <!-- Add information about potential impacts here -->
     </div>
   </div>
   
@@ -66,11 +66,11 @@
 <style>
 
     .header { 
-	  background-color: #4CAF50; /* Background color for the header */ 
-	  color: white; /* Text color */ 
-	  padding: 1rem; /* Padding around the header */ 
-	  display: flex; /* Use flexbox for alignment */ 
-	  align-items: center; /* Vertically center items */ 
+	    background-color: #4CAF50; 
+        color: white; 
+	    padding: 1rem; 
+	    display: flex; 
+	    align-items: center; 
 	}
 
     .header-title {
@@ -87,8 +87,8 @@
     }
 	
 	.header-title:hover { 
-	  background-color: #45a049; /* Button background color on hover */ 
-	  color: white; /* Button text color on hover */ 
+	    background-color: #45a049; /* Button background color on hover */ 
+	    color: white; /* Button text color on hover */ 
 	} 
 
     .container {
@@ -116,22 +116,6 @@
         color: #666;
         line-height: 1.6;
     }
-  
-    /* .back-button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 2rem;
-    }
-
-    .back-button:hover {
-        background-color: #45a049;
-    } */
 
     .image-container { 
         display: flex; 

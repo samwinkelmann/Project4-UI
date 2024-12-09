@@ -1,23 +1,23 @@
-    <script>
-        import { goto } from "$app/navigation";
+<script>
+    import { goto } from "$app/navigation";
+    let title = "Precipitation Patterns";
 
-        let title = "Precipitation Patterns";
+    let image1Big = false
+    let image2Big = false
 
-        let image1Big = false
-        let image2Big = false
-
-        function goHome() {
+    //Home button function
+    function goHome() {
         goto('/')
     }
 
-        function image1Size() {
+    //Image resize functions
+    function image1Size() {
         image1Big = !image1Big
     }
-
     function image2Size() {
         image2Big = !image2Big
     }
-    </script>
+</script>
 
 <div class="header"> 
 	<button class="header-title" on:click={goHome}>Climate Change</button> 
@@ -58,20 +58,18 @@
           <p>
             Changes in precipitation can lead to significant impacts, such as increased flooding or drought. Understanding these impacts allows for better preparedness and mitigation strategies to minimize adverse effects.
           </p>
-          <!-- Add information about possible impacts here -->
         </div>
-        <!-- <a class="back-button" href="/">Back to Home</a> -->
       </div>
       
 
 
 <style>
     	.header { 
-	  background-color: #4CAF50; /* Background color for the header */ 
-	  color: white; /* Text color */ 
-	  padding: 1rem; /* Padding around the header */ 
-	  display: flex; /* Use flexbox for alignment */ 
-	  align-items: center; /* Vertically center items */ 
+	  background-color: #4CAF50; 
+	  color: white; 
+	  padding: 1rem; 
+	  display: flex;  
+	  align-items: center;  
 	}
 
     .header-title {
@@ -88,8 +86,8 @@
     }
 	
 	.header-title:hover { 
-	  background-color: #45a049; /* Button background color on hover */ 
-	  color: white; /* Button text color on hover */ 
+	  background-color: #45a049; 
+	  color: white; 
 	} 
 
     .container {
@@ -117,22 +115,6 @@
         color: #666;
         line-height: 1.6;
     }
-    
-    /* .back-button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 2rem;
-    }
-    
-    .back-button:hover {
-        background-color: #45a049;
-    } */
 
     .image-container { 
         display: flex; 

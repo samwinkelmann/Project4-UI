@@ -7,14 +7,18 @@
     let showSeaLvl = true
 	let title = "Local Climate Impact Report";
 
+
+    // Hide/show the temperature section
     function toggleTemperature() {
         showTemp = !showTemp;
     }
 
+    //Hide/show the precipitation section
     function togglePrecipitation() {
         showPrecip = !showPrecip;
     }
 
+    //Hide/show the sea level section
     function toggleSeaLevel() {
         showSeaLvl = !showSeaLvl;
     }
@@ -25,7 +29,7 @@
     {#if $page.url.pathname !== '/'}
 	<a class="header-button" href="/">Home</a> 
     {/if}
-	<div class="spacer"></div> <!-- Add any other elements or buttons here --> </div>
+	<div class="spacer"></div></div>
   <div class="container">
 	<h1>Effects of Climate Change</h1>
 	<div class="report-section">
@@ -97,31 +101,31 @@
 	}
 
 	.header { 
-	  background-color: #4CAF50; /* Background color for the header */ 
-	  color: white; /* Text color */ 
-	  padding: 1rem; /* Padding around the header */ 
-	  display: flex; /* Use flexbox for alignment */ 
-	  align-items: center; /* Vertically center items */ 
+	  background-color: #4CAF50; 
+	  color: white; 
+	  padding: 1rem; 
+	  display: flex; 
+	  align-items: center; 
       height: 28px;
 	}
 
 	.header-button { 
-	  background-color: white; /* Button background color */ 
-	  color: #4CAF50; /* Button text color */ 
-	  padding: 10px 20px; /* Button padding */ 
-	  border: none; /* Remove default border */ 
-	  cursor: pointer; /* Cursor changes to pointer on hover */ 
-	  border-radius: 5px; /* Rounded corners */ 
-	  text-decoration: none; /* Remove default text decoration */ 
+	  background-color: white; 
+	  color: #4CAF50; 
+	  padding: 10px 20px; 
+	  border: none; 
+	  cursor: pointer; 
+	  border-radius: 5px; 
+	  text-decoration: none; 
 	} 
 	
 	.header-button:hover { 
-	  background-color: #45a049; /* Button background color on hover */ 
-	  color: white; /* Button text color on hover */ 
+	  background-color: #45a049; 
+	  color: white; 
 	} 
 	
 	.spacer { 
-	  flex: 1; /* Take up the remaining space */ 
+	  flex: 1; 
 	}
 
   h2 {
