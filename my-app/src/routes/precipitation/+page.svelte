@@ -1,12 +1,14 @@
-<div class="header"> 
-	<a class="header-button" href="/">Home</a> 
-	<div class="spacer"></div> <!-- Add any other elements or buttons here --> </div>
-
     <script>
+        import { goto } from "$app/navigation";
+
         let title = "Precipitation Patterns";
 
         let image1Big = false
         let image2Big = false
+
+        function goHome() {
+        goto('/')
+    }
 
         function image1Size() {
         image1Big = !image1Big
@@ -16,6 +18,10 @@
         image2Big = !image2Big
     }
     </script>
+
+<div class="header"> 
+	<button class="header-title" on:click={goHome}>Climate Change</button> 
+	</div>
       
       <div class="container">
         <h1>{title}</h1>
@@ -68,24 +74,23 @@
 	  align-items: center; /* Vertically center items */ 
 	}
 
-	.header-button { 
-	  background-color: white; /* Button background color */ 
-	  color: #4CAF50; /* Button text color */ 
-	  padding: 10px 20px; /* Button padding */ 
-	  border: none; /* Remove default border */ 
-	  cursor: pointer; /* Cursor changes to pointer on hover */ 
-	  border-radius: 5px; /* Rounded corners */ 
-	  text-decoration: none; /* Remove default text decoration */ 
-	} 
+    .header-title {
+        align-self: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-family: inherit;
+        color: #fff;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        text-align: left;
+    }
 	
-	.header-button:hover { 
+	.header-title:hover { 
 	  background-color: #45a049; /* Button background color on hover */ 
 	  color: white; /* Button text color on hover */ 
 	} 
-	
-	.spacer { 
-	  flex: 1; /* Take up the remaining space */ 
-	}
 
     .container {
         max-width: 800px;

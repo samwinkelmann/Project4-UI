@@ -2,9 +2,9 @@
     import { page } from '$app/stores'
     import {  slide } from 'svelte/transition' 
 
-    let showTemp = false
-    let showPrecip = false
-    let showSeaLvl = false
+    let showTemp = true
+    let showPrecip = true
+    let showSeaLvl = true
 	let title = "Local Climate Impact Report";
 
     function toggleTemperature() {
@@ -31,7 +31,7 @@
 	<div class="report-section">
         <h2 class="clickable" on:click={toggleTemperature}>Temperature Changes</h2>
         {#if showTemp}
-	    <p in:slide>Explore the historical and projected temperature changes in your area. <br><br>
+	    <p in:slide out:slide>Rising temperatures are the most obvious effect of global warming.   <br><br>
 	    <a class="button" href="/temperature">Learn More</a>
         </p>
         {/if}
@@ -39,7 +39,7 @@
 	<div class="report-section">
         <h2 class="clickable" on:click={togglePrecipitation}>Precipitation Patterns</h2>
         {#if showPrecip}
-        <p in:slide>Learn about changes in precipitation patterns and their effects on your community. <br><br>
+        <p in:slide out:slide>Changes in precipitation also implies major changes in the global ecosystem. See what it could mean for you. <br><br>
         <a class="button" href="/precipitation">Learn More</a>
         </p>
         {/if}
@@ -47,7 +47,7 @@
 	<div class="report-section">
         <h2 class="clickable" on:click={toggleSeaLevel}>Sea Level Rise</h2>
         {#if showSeaLvl}
-        <p in:slide>Understand the implications of sea level rise and what it means for coastal areas. <br><br>
+        <p in:slide out:slide>Global Warming is causing the sea level to rise.  This is having major effects on coastal areas accross the globe. <br><br>
         <a class="button" href="/sea-level">Learn More</a>
         </p>
         {/if}
@@ -102,7 +102,7 @@
 	  padding: 1rem; /* Padding around the header */ 
 	  display: flex; /* Use flexbox for alignment */ 
 	  align-items: center; /* Vertically center items */ 
-      height: 38px;
+      height: 28px;
 	}
 
 	.header-button { 

@@ -1,21 +1,27 @@
-<div class="header"> 
-	<a class="header-button" href="/">Home</a> 
-	<div class="spacer"></div> <!-- Add any other elements or buttons here --> </div>
-
     <script>
+        import { goto } from "$app/navigation";
+
         let title = "Sea Level Rise";
 
         let image1Big = false
         let image2Big = false
 
-        function image1Size() {
-        image1Big = !image1Big
-    }
+        function goHome() {
+            goto('/')
+        }
 
-    function image2Size() {
-        image2Big = !image2Big
-    }
+        function image1Size() {
+            image1Big = !image1Big
+        }
+
+        function image2Size() {
+            image2Big = !image2Big
+        }
     </script>
+
+<div class="header"> 
+	<button class="header-title" on:click={goHome}>Climate Change</button> 
+	</div>
 
     <div class="container">
         <h1>{title}</h1>
@@ -67,24 +73,23 @@
 	  align-items: center; /* Vertically center items */ 
 	}
 
-	.header-button { 
-	  background-color: white; /* Button background color */ 
-	  color: #4CAF50; /* Button text color */ 
-	  padding: 10px 20px; /* Button padding */ 
-	  border: none; /* Remove default border */ 
-	  cursor: pointer; /* Cursor changes to pointer on hover */ 
-	  border-radius: 5px; /* Rounded corners */ 
-	  text-decoration: none; /* Remove default text decoration */ 
-	} 
+    .header-title {
+        align-self: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-family: inherit;
+        color: #fff;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        text-align: left;
+    }
 	
-	.header-button:hover { 
+	.header-title:hover { 
 	  background-color: #45a049; /* Button background color on hover */ 
 	  color: white; /* Button text color on hover */ 
 	} 
-	
-	.spacer { 
-	  flex: 1; /* Take up the remaining space */ 
-	}
 
     .container {
         max-width: 800px;
@@ -111,22 +116,6 @@
         color: #666;
         line-height: 1.6;
     }
-    
-    /* .back-button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 2rem;
-    }
-    
-    .back-button:hover {
-        background-color: #45a049;
-        } */
 
     .image-container { 
         display: flex; 
